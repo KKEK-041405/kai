@@ -2,14 +2,14 @@
 {% load thumbnail %}
 {% block title %}MBTS{% endblock %}
 {% block body %}
-        <h1>This freist ffsfwlfjsifu</h1>
-        {% for post in ID %}
-        <a href="{% url 'mbts:detail' post.id %}" style="inline-block">
-            <div align="center">{{post.text}}</div>
-            {% thumbnail post.image "100x100" as im %}
-            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" >
-            {% endthumbnail %}
-            <hr>
-        </a>
-        {% endfor %}
-    {% endblock%}
+    <h1>This freist ffsfwlfjsifu</h1>
+    {% for post in ID %}
+    <a href="{% url 'mbts:detail' post.id %}" style="inline-block">
+        <div align="center">{{post.text}}</div>
+        {% thumbnail post.image "100x100" as im %}
+        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" >
+        {% endthumbnail %}
+        <hr>
+    </a>
+    {% endfor %}
+{% endblock%}
