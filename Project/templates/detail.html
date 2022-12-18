@@ -1,5 +1,6 @@
 {% extends "base.html"%}
 {% block title%} Details {%endblock%}
 {% block body %}
-<img src="{{object.image.url}}"> 
+<a href="{% url 'mbts:index'%}"><img src="{{object.image.url}}"></a>
+ 
 {% endblock %}
