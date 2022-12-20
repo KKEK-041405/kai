@@ -1,8 +1,9 @@
 from django.db import models
 from sorl.thumbnail import ImageField
+from mysite import settings
+
 class Post(models.Model):
-    text = models.CharField( max_length=150, blank=False,null=False)
-    image = models.ImageField((""), upload_to=None, height_field=None, width_field=None, max_length=None)
+    pinno = models.CharField( max_length=12, blank=False,null=True)
+    image = models.ImageField((""), upload_to=settings.MEDIA_ROOT, height_field=None, width_field=None, max_length=None)
     def __str__(self):
-        return self.text
-# Create your models here.
+        return self.pinno

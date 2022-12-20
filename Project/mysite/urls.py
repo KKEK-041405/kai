@@ -22,6 +22,7 @@ from mbts import urls as mbts_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(mbts_urls,namespace='mbts')),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

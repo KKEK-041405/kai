@@ -4,12 +4,12 @@
 {% block body %}
     <h1>This freist ffsfwlfjsifu</h1>
     {% for post in ID %}
-    <a href="{% url 'mbts:detail' post.id %}" style="inline-block">
-        <div align="center">{{post.text}}</div>
-        {% thumbnail post.image "100x100" as im %}
-        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" >
-        {% endthumbnail %}
-        <hr>
-    </a>
+    <div align="right">
+    <lable for="uname">PIn no</lable>
+    <input  type=""></div>
+    {% thumbnail post.image "100x100" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" >
+    {% endthumbnail %}
+    <hr>
     {% endfor %}
 {% endblock%}
